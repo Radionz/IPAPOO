@@ -7,7 +7,6 @@ public class Player {
 
 	private final String name;
 
-	/* Basic getters / setters */
 	public String getName() {
 		return name;
 	}
