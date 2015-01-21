@@ -1,5 +1,6 @@
 package zuul;
 
+import zuul.Game;
 
 /**
  * @author Nicolas Sarroche, Dorian Blanc

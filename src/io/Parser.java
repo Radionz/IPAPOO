@@ -19,14 +19,12 @@ import java.util.Scanner;
  *
  */
 public class Parser {
-    private CommandWords commands;  // holds all valid command words
     private Scanner reader;         // source of command input
 
     /**
      * Create a parser to read from the terminal window.
      */
     public Parser() {
-        commands = new CommandWords();
         reader = new Scanner(System.in);
     }
 
@@ -57,8 +55,8 @@ public class Parser {
                 word2 = null;
             }
         }
-
-        return new Command(commands.getCommandWord(word1), word2);
+        
+        return new Command(word1, word2);
     }
 
     /**
@@ -77,12 +75,5 @@ public class Parser {
             return firstLetter + rest;
         }
         return inputLine;
-    }
-
-    /**
-     * Print out a list of valid command words.
-     */
-    public void showCommands() {
-        commands.showAll();
     }
 }
